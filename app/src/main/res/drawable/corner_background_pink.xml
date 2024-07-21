@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/pale_pink" /> <!-- Change to your desired button background color -->
+    <corners android:radius="30dp" /> <!-- Adjust the radius to control the oval shape -->
+
+    <stroke
+        android:width="2dp" android:color="@color/pink" />
+</shape>

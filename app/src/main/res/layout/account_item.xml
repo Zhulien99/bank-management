@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mode="same_level"
+    app:dragEdge="right">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/medium_margin"
+            android:layout_height="90dp">
+
+            <LinearLayout
+                android:id="@+id/changeStatusHolder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trashHolder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/trash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_delete_24"
+                    app:tint="@color/red" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+
+    <!-- Your main layout here -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/accountHolder"
+            android:background="@drawable/gray_light_ripple"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="90dp"
+            >
+
+        <ImageView
+            android:id="@+id/imgAccount"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/medium_margin"
+            android:src="@drawable/account"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+            <TextView
+                android:id="@+id/txtAccountName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_large_margin"
+                android:textSize="@dimen/_14sdp"
+                android:drawablePadding="@dimen/extra_small_margin"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/imgAccount"
+                app:layout_constraintTop_toTopOf="@id/imgAccount"
+                />
+
+
+            <TextView
+                android:id="@+id/txtIBAN"
+                android:layout_width="@dimen/no_dimens"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_small_text_size"
+                android:singleLine="true"
+                android:maxWidth="300dp"
+                android:textColor="@color/gray_light"
+                android:layout_marginEnd="@dimen/small_margin"
+                app:layout_constraintEnd_toStartOf="@id/txtTimeModified"
+                app:layout_constraintTop_toBottomOf="@id/txtAccountName"
+                app:layout_constraintStart_toStartOf="@id/txtAccountName"
+                />
+
+            <TextView
+                android:id="@+id/txtAccountAmount"
+                android:layout_width="@dimen/no_dimens"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_small_text_size"
+                android:singleLine="true"
+                android:maxWidth="300dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="@dimen/small_margin"
+                app:layout_constraintEnd_toStartOf="@id/txtTimeModified"
+                app:layout_constraintTop_toBottomOf="@id/txtIBAN"
+                app:layout_constraintStart_toStartOf="@id/txtAccountName"
+                />
+
+            <TextView
+                android:id="@+id/txtTimeModified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_small_text_size"
+                android:textColor="@color/grey"
+                android:layout_marginTop="@dimen/medium_large_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imgReadStatus"/>
+
+            <ImageView
+                android:id="@+id/imgReadStatus"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:src="@drawable/check"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/txtTimeModified"
+                app:layout_constraintTop_toTopOf="@id/txtTimeModified"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

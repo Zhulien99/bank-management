@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:adnroid="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Add transfer"/>
+
+    <ImageView
+        android:id="@+id/dialogClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_close_24"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectAccount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:boxBackgroundColor="@color/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/dialogClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:completionThreshold="0"
+            android:popupBackground="@color/real_ink"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputBalance"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:hint="@string/transfer_amount"
+        android:textColorHint="@color/gray_light"
+        app:hintTextColor="@color/gray_light"
+        app:placeholderTextColor="@color/white"
+        app:helperTextTextColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/selectAccount"
+        app:boxCornerRadiusBottomEnd="@dimen/elevation_large"
+        app:boxCornerRadiusBottomStart="@dimen/elevation_large"
+        app:boxCornerRadiusTopEnd="@dimen/elevation_large"
+        app:boxCornerRadiusTopStart="@dimen/elevation_large"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeErrorColor="@color/gray_light"
+        app:boxStrokeColor="@color/gray_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTransferAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectAccountBeneficiary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:boxBackgroundColor="@color/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/txtInputBalance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteAccountBeneficiary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:completionThreshold="0"
+            android:text="@string/please_select"
+            android:popupBackground="@color/real_ink"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txtCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/cancel"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_marginStart="@dimen/medium_margin"
+        app:layout_constraintBottom_toBottomOf="@id/btnAction"
+        app:layout_constraintTop_toTopOf="@id/btnAction"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAction"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:text="@string/confirm"
+        android:background="@drawable/large_corner_background"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text_size"
+        android:textAllCaps="false"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/selectAccountBeneficiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

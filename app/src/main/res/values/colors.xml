@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="darker_ink">#142838</color>
+    <color name="dark_ink">#203546</color>
+    <color name="real_ink">#2A4356</color>
+    <color name="gray_light_ink">#9FA7AC</color>
+    <color name="pink">#EE1C59</color>
+    <color name="real_pink">#EE1B59</color>
+    <color name="grey_dark">#444444</color>
+
+    <color name="grey">#B5B5B5</color>
+    <color name="pale_pink">#FFE5EE</color>
+    <color name="grey_light">#EBEBEB</color>
+
+    <color name="chat_bubble_border">#446279</color>
+    <color name="chat_bubble_border_send">#2B4356</color>
+
+    <color name="edittext_background">#0F2231</color>
+    <color name="red">#FF010C</color>
+    <color name="gray_icon">#FFFFFFFF</color>
+    <color name="gray_dark">#1A1A1A</color>
+    <color name="gray_light">#999999</color>
+    <color name="red_icon_tint">#FF030E</color>
+    <color name="gray_lightest">#EEEEEE</color>
+    <color name="grass_green">#00C852</color>
+    <color name="green_light">#3CFF33</color>
+    <color name="green_lightest">#283CFF33</color>
+    <color name="green_selector">#34C759</color>
+    <color name="green">#12E300</color>
+
+    <color name="yellow">#FFEB00</color>
+
+    <color name="blur">#992a4356</color>
+
+    <color name="dark_ink_with_alpha">#80203546</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" >#446279</color>
+
+    <color name="google_red">#EA4335</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+</resources>

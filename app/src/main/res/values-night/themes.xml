@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BankManagement" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/real_ink</item>
+        <item name="colorPrimaryVariant">@color/real_ink</item>
+        <item name="colorOnPrimary">@color/real_ink</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/real_ink</item>
+        <item name="colorSecondaryVariant">@color/real_ink</item>
+        <item name="colorOnSecondary">@color/real_ink</item>
+        <!-- Status bar color. -->
+        <item name="bottomNavigationStyle">@style/BottomNavigationViewStyleDark</item>
+        <item name="android:statusBarColor">@color/darker_ink</item>
+        <item name="android:navigationBarColor">@color/darker_ink</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+        <item name="android:windowBackground">@color/dark_ink</item>
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+        <item name="android:textColorLink">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:popupMenuStyle">@style/popupOverflowMenu</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/MenuTextAppearance</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/MenuTextAppearance</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/real_ink</item>
+    </style>
+
+</resources>

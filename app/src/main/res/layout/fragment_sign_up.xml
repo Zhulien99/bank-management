@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:scrollbars="vertical"
+    android:background="@color/darker_ink"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/large_large_margin"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".login.LoginActivity">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:background="@drawable/icons8_mastercard_logo"
+            android:backgroundTint="@color/white"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+            app:layout_constraintStart_toStartOf="@id/imgLogo"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintEnd_toEndOf="@id/imgLogo"
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/holderEt"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/txtLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/usernameHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/large_corner_background"
+                android:backgroundTint="@color/edittext_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/user"
+                    app:tint="@color/grey"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="@dimen/no_dimens"
+                    android:layout_height="@dimen/no_dimens"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/extra_small_margin"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/username"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgUser"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEnterUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@color/real_pink"
+                android:visibility="gone"
+                android:textSize="@dimen/medium_large_text_size"
+                android:layout_marginTop="@dimen/extra_small_margin"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_gravity="start" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/passwordHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/large_corner_background"
+                android:backgroundTint="@color/edittext_background"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:layout_constraintTop_toBottomOf="@id/txtEnterUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgEye"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/eye"
+                    app:tint="@color/grey"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="@dimen/no_dimens"
+                    android:layout_height="@dimen/no_dimens"
+                    android:background="@null"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:paddingTop="@dimen/extra_small_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgEye"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEnterPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@color/real_pink"
+                android:textSize="@dimen/medium_large_text_size"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/extra_small_margin"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_gravity="start" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emailHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/large_corner_background"
+                android:backgroundTint="@color/edittext_background"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:layout_constraintTop_toBottomOf="@id/txtEnterUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgLock"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/at"
+                    app:tint="@color/grey"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="@dimen/no_dimens"
+                    android:layout_height="@dimen/no_dimens"
+                    android:background="@null"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:paddingTop="@dimen/extra_small_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgLock"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEnterEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@color/real_pink"
+                android:textSize="@dimen/medium_large_text_size"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/extra_small_margin"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_gravity="start" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEnterLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@color/real_pink"
+                android:textSize="@dimen/medium_large_text_size"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/extra_small_margin"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_gravity="start" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/birthdayHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/large_corner_background"
+                android:backgroundTint="@color/edittext_background"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:layout_constraintTop_toBottomOf="@id/txtEnterUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgCalendar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/calendar"
+                    app:tint="@color/grey"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBirthday"
+                    android:layout_width="@dimen/no_dimens"
+                    android:layout_height="@dimen/no_dimens"
+                    android:background="@null"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:hint="@string/birthday"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="date"
+                    android:imeOptions="actionNext"
+                    android:paddingTop="@dimen/extra_small_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgCalendar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEnterBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@color/real_pink"
+                android:textSize="@dimen/medium_large_text_size"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/extra_small_margin"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_gravity="start" />
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/large_corner_background"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="32sp"
+            android:paddingTop="@dimen/extra_small_margin"
+            android:elevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/holderEt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorSize="35dp"
+            android:elevation="10dp"
+            android:indeterminateTintMode="src_atop"
+            app:indicatorColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/btnSignUp"
+            app:layout_constraintStart_toStartOf="@id/btnSignUp"
+            app:layout_constraintEnd_toEndOf="@id/btnSignUp"
+            app:layout_constraintBottom_toBottomOf="@id/btnSignUp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/loginHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintVertical_bias="0.85"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textSize="24sp"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

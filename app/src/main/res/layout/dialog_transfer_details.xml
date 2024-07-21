@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:adnroid="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/transfer_details"/>
+
+    <ImageView
+        android:id="@+id/dialogClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_close_24"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_dimens"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/dialogClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:paddingVertical="@dimen/extra_small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:background="@drawable/corner_dashed_background"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/info_circle"
+                app:tint="@color/white"
+                android:layout_marginStart="@dimen/medium_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTypeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_large_text_size"
+                android:text="@string/type"
+                android:layout_marginStart="@dimen/medium_margin"
+                app:layout_constraintStart_toEndOf="@id/info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_size"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:layout_marginStart="@dimen/medium_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/from_account"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/large_corner_background"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:paddingStart="@dimen/medium_margin"
+            android:drawablePadding="@dimen/small_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:drawableStart="@drawable/account"
+            app:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/beneficiary_account"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtBeneficiaryAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/large_corner_background"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:paddingStart="@dimen/medium_margin"
+            android:drawablePadding="@dimen/small_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:drawableStart="@drawable/account"
+            app:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/transfer_amount"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/large_corner_background"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:paddingStart="@dimen/medium_margin"
+            android:drawablePadding="@dimen/small_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:drawableStart="@drawable/baseline_attach_money_24"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/created_on"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCreatedOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/large_corner_background"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:paddingStart="@dimen/medium_margin"
+            android:drawablePadding="@dimen/small_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/modified_on"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtModifiedOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/large_corner_background"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:paddingStart="@dimen/medium_margin"
+            android:drawablePadding="@dimen/small_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

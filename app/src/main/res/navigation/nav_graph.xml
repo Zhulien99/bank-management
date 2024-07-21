@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.julien.bankmanagement.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_transfersFragment"
+            app:destination="@id/transfersFragment"
+            app:popUpTo="@id/homeFragment"
+            app:restoreState="true"
+            />
+
+        <action
+            android:id="@+id/action_homeFragment_to_accountDetailsFragment"
+            app:destination="@id/accountDetailsFragment"
+            app:popUpTo="@id/homeFragment"
+            app:restoreState="true"
+            />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/transfersFragment"
+        android:name="com.julien.bankmanagement.transfers.TransfersFragment"
+        tools:layout="@layout/fragment_transfers">
+
+        <argument
+            android:name="accountID"
+            app:argType="integer"
+            app:nullable="false"/>
+
+        <argument
+            android:name="accountStatus"
+            app:argType="string"
+            app:nullable="false"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountDetailsFragment"
+        android:name="com.julien.bankmanagement.details.AccountDetailsFragment"
+        tools:layout="@layout/fragment_account_details">
+
+        <argument
+            android:name="accountID"
+            app:argType="integer"
+            app:nullable="false"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.julien.bankmanagement.user.UserSettingsFragment"
+        tools:layout="@layout/fragment_user_settings"/>
+</navigation>

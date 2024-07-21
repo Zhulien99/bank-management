@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">BankManagement</string>
+    <string name="already_have_account">Already have account</string>
+    <string name="log_in">Log in</string>
+    <string name="message">Message</string>
+    <string name="chat">Chat</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="required">Required</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="birthday">Birthday</string>
+    <string name="invalid_email_address_provided">Invalid Email</string>
+    <string name="accounts">Accounts</string>
+    <string name="add">Add</string>
+    <string name="account_name">Account Name</string>
+    <string name="initial_balance">Initial Balance</string>
+    <string name="account_transfers">Account Transfers</string>
+    <string name="account_details">Account Details</string>
+    <string name="transfers">Transfers</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="you_have_no_transfers_yet">You have no transfers yet</string>
+    <string name="create_transfer">Create Transfer</string>
+    <string name="confirm">Confirm</string>
+    <string name="transfer_amount">Transfer Amount</string>
+    <string name="account_balance"> %s ($%s)</string>
+    <string name="please_select">Please select</string>
+    <string name="available_amount">Available Amount</string>
+    <string name="created_on">Created On</string>
+    <string name="modified_on">Modified On</string>
+    <string name="status">Status</string>
+    <string name="iban">IBAN</string>
+    <string name="transfer_details">Transfer Details</string>
+    <string name="from_account">From Account</string>
+    <string name="beneficiary_account">Beneficiary Account</string>
+    <string name="type">TYPE</string>
+    <string name="account_login">Account &amp; Login</string>
+    <string name="user_id">User ID</string>
+    <string name="logut">Logout</string>
+    <string name="profile">Profile</string>
+
+</resources>
